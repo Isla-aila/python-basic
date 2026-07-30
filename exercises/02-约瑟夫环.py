@@ -10,10 +10,10 @@ num,i = 0,0
 while len(num_list) >1:
     num +=1
     # 如果一圈都数完了，重置索引为0，从头继续数
-    if len(num_list)-1 == i:
-        i = -1
+    if len(num_list) == i:
+        i = 0
 # 如果当前数列的数字是3或3的倍数，就从列表中删除这个元素
-    if num / 3 == int(num / 3):
+    if num % 3 == 0:
         del num_list[i]
         i -=1
 
@@ -21,7 +21,6 @@ while len(num_list) >1:
 
 # 只剩下一个元素，该元素即为幸运元素
 print(num_list[0])
-
 
 
 
